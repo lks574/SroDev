@@ -7,10 +7,17 @@ target 'TextureSample' do
 
   # Pods for TextureSample
   pod 'Texture', '~> 3.0'
+  pod 'RxSwift', '5.1'
+  pod 'RxCocoa', '5.1'
+  pod 'RxAlamofire', '~> 5.7.1'
   
   target 'TextureSampleTests' do
     inherit! :search_paths
     # Pods for testing
+    
+    pod 'RxBlocking', '5.1'
+    pod 'RxTest', '5.1'
+        
   end
 
   target 'TextureSampleUITests' do
