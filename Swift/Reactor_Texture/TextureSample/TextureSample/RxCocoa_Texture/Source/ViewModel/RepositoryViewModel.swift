@@ -85,6 +85,8 @@ class RepositoryViewModel {
                 repo.desc = text
                 RepoProvider.update(repo)
             }).disposed(by: disposeBag)
+        
+        // 변경 전
 //        repoObserver
 //            .map { $0?.user?.username }
 //            .bind(to: username)
