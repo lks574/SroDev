@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0808A6A4258264B800855C3E /* ReactorKitEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0808A6A3258264B800855C3E /* ReactorKitEx.swift */; };
+		0808A6AD2582654B00855C3E /* SignUpContainerNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0808A6AC2582654B00855C3E /* SignUpContainerNode.swift */; };
+		0808A6B2258265AD00855C3E /* SignUpFieldNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0808A6B1258265AD00855C3E /* SignUpFieldNode.swift */; };
+		0808A6B8258265ED00855C3E /* SignUpFieldReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0808A6B7258265ED00855C3E /* SignUpFieldReactor.swift */; };
 		088E2151257E5CDA00CBEF3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088E2150257E5CDA00CBEF3D /* AppDelegate.swift */; };
 		088E2153257E5CDA00CBEF3D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088E2152257E5CDA00CBEF3D /* SceneDelegate.swift */; };
 		088E2155257E5CDA00CBEF3D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088E2154257E5CDA00CBEF3D /* ViewController.swift */; };
@@ -80,6 +84,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0808A6A3258264B800855C3E /* ReactorKitEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactorKitEx.swift; sourceTree = "<group>"; };
+		0808A6AC2582654B00855C3E /* SignUpContainerNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpContainerNode.swift; sourceTree = "<group>"; };
+		0808A6B1258265AD00855C3E /* SignUpFieldNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpFieldNode.swift; sourceTree = "<group>"; };
+		0808A6B7258265ED00855C3E /* SignUpFieldReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpFieldReactor.swift; sourceTree = "<group>"; };
 		088E214D257E5CDA00CBEF3D /* TextureSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TextureSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		088E2150257E5CDA00CBEF3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		088E2152257E5CDA00CBEF3D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -175,6 +183,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0808A6A2258264A300855C3E /* ReactorkitEx */ = {
+			isa = PBXGroup;
+			children = (
+				0808A6B6258265DC00855C3E /* Reactor */,
+				0808A6AB2582654500855C3E /* Node */,
+				0808A6A3258264B800855C3E /* ReactorKitEx.swift */,
+			);
+			path = ReactorkitEx;
+			sourceTree = "<group>";
+		};
+		0808A6AB2582654500855C3E /* Node */ = {
+			isa = PBXGroup;
+			children = (
+				0808A6AC2582654B00855C3E /* SignUpContainerNode.swift */,
+				0808A6B1258265AD00855C3E /* SignUpFieldNode.swift */,
+			);
+			path = Node;
+			sourceTree = "<group>";
+		};
+		0808A6B6258265DC00855C3E /* Reactor */ = {
+			isa = PBXGroup;
+			children = (
+				0808A6B7258265ED00855C3E /* SignUpFieldReactor.swift */,
+			);
+			path = Reactor;
+			sourceTree = "<group>";
+		};
 		088E2144257E5CDA00CBEF3D = {
 			isa = PBXGroup;
 			children = (
@@ -200,6 +235,7 @@
 		088E214F257E5CDA00CBEF3D /* TextureSample */ = {
 			isa = PBXGroup;
 			children = (
+				0808A6A2258264A300855C3E /* ReactorkitEx */,
 				937CAF90257F655700F5ACB4 /* RxCocoa_Texture */,
 				937CAF72257F640F00F5ACB4 /* InstaClone */,
 				088E2150257E5CDA00CBEF3D /* AppDelegate.swift */,
@@ -726,12 +762,14 @@
 				937CAF5A257F0B2E00F5ACB4 /* LikeShareCommentInteractor.swift in Sources */,
 				937CAFA0257F65D800F5ACB4 /* ASButtonNode+Rx.swift in Sources */,
 				088E21A0257E6C4500CBEF3D /* HomeViewController.swift in Sources */,
+				0808A6AD2582654B00855C3E /* SignUpContainerNode.swift in Sources */,
 				93A73585257F7A7E001B298D /* Decoder+extension.swift in Sources */,
 				937CAFCD257F671100F5ACB4 /* Driver+ASSubscription.swift in Sources */,
 				93A73593257F849A001B298D /* UserProfileViewController.swift in Sources */,
 				937CB00F257F6E7500F5ACB4 /* Repository.swift in Sources */,
 				937CAFC3257F66E500F5ACB4 /* ASTextNode+Rx.swift in Sources */,
 				088E2155257E5CDA00CBEF3D /* ViewController.swift in Sources */,
+				0808A6B2258265AD00855C3E /* SignUpFieldNode.swift in Sources */,
 				937CAFAF257F664200F5ACB4 /* ASEditableTextNode+Rx.swift in Sources */,
 				937CAF5F257F123700F5ACB4 /* LastCommentNode.swift in Sources */,
 				93A73568257F7682001B298D /* RepoService.swift in Sources */,
@@ -751,6 +789,7 @@
 				937CB006257F6E4900F5ACB4 /* RepoProvider.swift in Sources */,
 				088E2151257E5CDA00CBEF3D /* AppDelegate.swift in Sources */,
 				088E21B7257E6EA300CBEF3D /* UserInsta.swift in Sources */,
+				0808A6A4258264B800855C3E /* ReactorKitEx.swift in Sources */,
 				088E21AE257E6E4900CBEF3D /* HomeTableNodeDataSource.swift in Sources */,
 				937CB022257F711300F5ACB4 /* ImageDownloader.swift in Sources */,
 				088E2196257E6BC500CBEF3D /* BaseNode.swift in Sources */,
@@ -761,6 +800,7 @@
 				088E21C4257E6EBF00CBEF3D /* NewsFeed.swift in Sources */,
 				937CAF93257F657A00F5ACB4 /* ASBinder.swift in Sources */,
 				088E21CE257E6EDB00CBEF3D /* BaseDataSource.swift in Sources */,
+				0808A6B8258265ED00855C3E /* SignUpFieldReactor.swift in Sources */,
 				088E21C9257E6ECD00CBEF3D /* Comment.swift in Sources */,
 				088E2153257E5CDA00CBEF3D /* SceneDelegate.swift in Sources */,
 			);

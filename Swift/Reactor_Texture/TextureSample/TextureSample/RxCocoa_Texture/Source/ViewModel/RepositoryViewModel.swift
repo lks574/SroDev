@@ -36,6 +36,9 @@ class RepositoryViewModel {
         
         RepoProvider.addAndUpdate(repository)
         
+        // share 를 하는 이유
+        // Observable의 경우 subscribe 마다 시퀸스를 방출한다. (통신의 경우 subscribe, bind마다 타게된다)
+        // share를 사용하게 되면 시퀸스를 공유한다. 인자의 경우 버퍼와 버퍼 생명주기
         let repoObserver = RepoProvider.observable(id: id)
             .asObservable()
             .share(replay: 1, scope: .whileConnected)

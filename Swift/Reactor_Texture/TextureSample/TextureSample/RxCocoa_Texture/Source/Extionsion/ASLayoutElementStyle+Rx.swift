@@ -32,4 +32,16 @@ extension ASLayoutElementStyle {
         self.flexGrow = 0.0
         return self
     }
+    
+    @discardableResult
+    func height(_ scale: ASDimension) -> ASLayoutElementStyle {
+        self.height = scale
+        return self
+    }
+
+    @discardableResult
+    func widht(_ scale: ASDimension) -> ASLayoutElementStyle {
+        self.width = scale
+        return self
+    }
 }
