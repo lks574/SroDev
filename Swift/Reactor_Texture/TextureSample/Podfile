@@ -11,6 +11,7 @@ target 'TextureSample' do
   pod 'RxCocoa', '5.1'
   pod 'RxAlamofire', '~> 5.7.1'
   pod 'ReactorKit', '~> 2.1'
+  pod 'RxKeyboard', '~> 1.0'
   
   target 'TextureSampleTests' do
     inherit! :search_paths

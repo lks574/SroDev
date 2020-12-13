@@ -70,7 +70,7 @@ class SignUpFieldReactor: Reactor {
         case editingChanged(Scope?, String?)
     }
     
-    enum Muataion {
+    enum Mutation {
         case setStatus(Scope?, String?)
     }
     
@@ -80,6 +80,40 @@ class SignUpFieldReactor: Reactor {
     }
     
     let initialState: State = State()
+    
+    func mutate(action: Action) -> Observable<Mutation> {
+        switch action {
+        case .editingChanged(let scope, let text):
+            return Observable.just(.setStatus(scope, text))
+        }
+    }
+    
+    func reduce(state: State, mutation: Mutation) -> State {
+        var newState = state
+        
+        switch mutation {
+        case .setStatus(let scope, let text):
+            guard let text = text, let scope = scope else { return state }
+            if text.isEmpty {
+                newState.message = nil
+                newState.fieldStatus = .wrong
+                return newState
+            }
+            
+            let fieldStatus: FieldStatus
+            
+            switch scope {
+            case .email:
+                fieldStatus = text.isValidEmail() ? .valid : .wrong
+            case .password:
+                fieldStatus = text.count > Const.passwordMinimumValidCount ? .valid : .wrong
+            }
+            
+            newState.fieldStatus = fieldStatus
+            newState.message = fieldStatus.message(scope)
+        }
+        return newState
+    }
 }
 
 
@@ -91,5 +125,13 @@ extension UIColor {
     
     static var invalid: UIColor {
         return UIColor.init(red: 0.8, green: 0.2, blue: 0.3, alpha: 1.0)
+    }
+}
+
+extension String {
+    
+    func isValidEmail() -> Bool {
+        let emailTest = NSPredicate(format:"SELF MATCHES %@", "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}")
+        return emailTest.evaluate(with: self)
     }
 }

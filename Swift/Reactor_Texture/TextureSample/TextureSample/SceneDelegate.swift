@@ -18,9 +18,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
         window?.windowScene = windowScene
-        let viewController = RepositoryViewController()
-        let navi = ASNavigationController(rootViewController: viewController)
-        window?.rootViewController = navi
+        let viewController = SignUpNodeController()
+//        let navi = ASNavigationController(rootViewController: viewController)
+        window?.rootViewController = viewController
         window?.makeKeyAndVisible()
     }
 

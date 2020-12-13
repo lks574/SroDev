@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0808A6A4258264B800855C3E /* ReactorKitEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0808A6A3258264B800855C3E /* ReactorKitEx.swift */; };
+		0808A6A4258264B800855C3E /* SignUpNodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0808A6A3258264B800855C3E /* SignUpNodeController.swift */; };
 		0808A6AD2582654B00855C3E /* SignUpContainerNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0808A6AC2582654B00855C3E /* SignUpContainerNode.swift */; };
 		0808A6B2258265AD00855C3E /* SignUpFieldNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0808A6B1258265AD00855C3E /* SignUpFieldNode.swift */; };
 		0808A6B8258265ED00855C3E /* SignUpFieldReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0808A6B7258265ED00855C3E /* SignUpFieldReactor.swift */; };
@@ -84,7 +84,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0808A6A3258264B800855C3E /* ReactorKitEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactorKitEx.swift; sourceTree = "<group>"; };
+		0808A6A3258264B800855C3E /* SignUpNodeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpNodeController.swift; sourceTree = "<group>"; };
 		0808A6AC2582654B00855C3E /* SignUpContainerNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpContainerNode.swift; sourceTree = "<group>"; };
 		0808A6B1258265AD00855C3E /* SignUpFieldNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpFieldNode.swift; sourceTree = "<group>"; };
 		0808A6B7258265ED00855C3E /* SignUpFieldReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpFieldReactor.swift; sourceTree = "<group>"; };
@@ -188,7 +188,7 @@
 			children = (
 				0808A6B6258265DC00855C3E /* Reactor */,
 				0808A6AB2582654500855C3E /* Node */,
-				0808A6A3258264B800855C3E /* ReactorKitEx.swift */,
+				0808A6A3258264B800855C3E /* SignUpNodeController.swift */,
 			);
 			path = ReactorkitEx;
 			sourceTree = "<group>";
@@ -789,7 +789,7 @@
 				937CB006257F6E4900F5ACB4 /* RepoProvider.swift in Sources */,
 				088E2151257E5CDA00CBEF3D /* AppDelegate.swift in Sources */,
 				088E21B7257E6EA300CBEF3D /* UserInsta.swift in Sources */,
-				0808A6A4258264B800855C3E /* ReactorKitEx.swift in Sources */,
+				0808A6A4258264B800855C3E /* SignUpNodeController.swift in Sources */,
 				088E21AE257E6E4900CBEF3D /* HomeTableNodeDataSource.swift in Sources */,
 				937CB022257F711300F5ACB4 /* ImageDownloader.swift in Sources */,
 				088E2196257E6BC500CBEF3D /* BaseNode.swift in Sources */,
