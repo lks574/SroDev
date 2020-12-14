@@ -35,6 +35,10 @@
 		165C5F2C7A53CCEACF2946D2 /* Pods_TextureSampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D490507B91C813AB18051C66 /* Pods_TextureSampleTests.framework */; };
 		2788C8850C97711209DD2369 /* Pods_TextureSample_TextureSampleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C45FD777A6BEF1837020BD1 /* Pods_TextureSample_TextureSampleUITests.framework */; };
 		41A41B5D9E90CE7BD157054C /* Pods_TextureSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE3C8BD1A339CE8ACE223081 /* Pods_TextureSample.framework */; };
+		930438062586F787001AD83C /* UIImage+Extionsion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930438052586F787001AD83C /* UIImage+Extionsion.swift */; };
+		9304380E2586F7D0001AD83C /* UIColor+Extionsion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9304380D2586F7D0001AD83C /* UIColor+Extionsion.swift */; };
+		930438132586F817001AD83C /* String+Extionsion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930438122586F817001AD83C /* String+Extionsion.swift */; };
+		930438192586F85B001AD83C /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930438182586F85B001AD83C /* Log.swift */; };
 		937CAF51257F0A4400F5ACB4 /* LikeShareCommentNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937CAF50257F0A4400F5ACB4 /* LikeShareCommentNode.swift */; };
 		937CAF5A257F0B2E00F5ACB4 /* LikeShareCommentInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937CAF59257F0B2E00F5ACB4 /* LikeShareCommentInteractor.swift */; };
 		937CAF5F257F123700F5ACB4 /* LastCommentNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937CAF5E257F123700F5ACB4 /* LastCommentNode.swift */; };
@@ -121,6 +125,10 @@
 		7736E28736C46D26E66F3A08 /* Pods-TextureSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextureSample.release.xcconfig"; path = "Target Support Files/Pods-TextureSample/Pods-TextureSample.release.xcconfig"; sourceTree = "<group>"; };
 		810602458AAAD1430A483889 /* Pods-TextureSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextureSample.debug.xcconfig"; path = "Target Support Files/Pods-TextureSample/Pods-TextureSample.debug.xcconfig"; sourceTree = "<group>"; };
 		8C45FD777A6BEF1837020BD1 /* Pods_TextureSample_TextureSampleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TextureSample_TextureSampleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		930438052586F787001AD83C /* UIImage+Extionsion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extionsion.swift"; sourceTree = "<group>"; };
+		9304380D2586F7D0001AD83C /* UIColor+Extionsion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extionsion.swift"; sourceTree = "<group>"; };
+		930438122586F817001AD83C /* String+Extionsion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extionsion.swift"; sourceTree = "<group>"; };
+		930438182586F85B001AD83C /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		937CAF50257F0A4400F5ACB4 /* LikeShareCommentNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeShareCommentNode.swift; sourceTree = "<group>"; };
 		937CAF59257F0B2E00F5ACB4 /* LikeShareCommentInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeShareCommentInteractor.swift; sourceTree = "<group>"; };
 		937CAF5E257F123700F5ACB4 /* LastCommentNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastCommentNode.swift; sourceTree = "<group>"; };
@@ -186,9 +194,7 @@
 		0808A6A2258264A300855C3E /* ReactorkitEx */ = {
 			isa = PBXGroup;
 			children = (
-				0808A6B6258265DC00855C3E /* Reactor */,
-				0808A6AB2582654500855C3E /* Node */,
-				0808A6A3258264B800855C3E /* SignUpNodeController.swift */,
+				930438002586F409001AD83C /* SignUpEx */,
 			);
 			path = ReactorkitEx;
 			sourceTree = "<group>";
@@ -235,6 +241,7 @@
 		088E214F257E5CDA00CBEF3D /* TextureSample */ = {
 			isa = PBXGroup;
 			children = (
+				930438012586F6B6001AD83C /* Base */,
 				0808A6A2258264A300855C3E /* ReactorkitEx */,
 				937CAF90257F655700F5ACB4 /* RxCocoa_Texture */,
 				937CAF72257F640F00F5ACB4 /* InstaClone */,
@@ -271,7 +278,6 @@
 			isa = PBXGroup;
 			children = (
 				937CAF6C257F170700F5ACB4 /* Resource */,
-				937CAF63257F16DA00F5ACB4 /* Extension */,
 				088E21E4257E70AC00CBEF3D /* Constant */,
 				088E21B5257E6E9D00CBEF3D /* Models */,
 				088E2194257E6BBD00CBEF3D /* Base */,
@@ -378,20 +384,40 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		930438002586F409001AD83C /* SignUpEx */ = {
+			isa = PBXGroup;
+			children = (
+				0808A6A3258264B800855C3E /* SignUpNodeController.swift */,
+				0808A6AB2582654500855C3E /* Node */,
+				0808A6B6258265DC00855C3E /* Reactor */,
+			);
+			path = SignUpEx;
+			sourceTree = "<group>";
+		};
+		930438012586F6B6001AD83C /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				930438172586F854001AD83C /* Log */,
+				937CB026257F724400F5ACB4 /* Extionsion */,
+				937CAF91257F656200F5ACB4 /* Library */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		930438172586F854001AD83C /* Log */ = {
+			isa = PBXGroup;
+			children = (
+				930438182586F85B001AD83C /* Log.swift */,
+			);
+			path = Log;
+			sourceTree = "<group>";
+		};
 		937CAF58257F0B2700F5ACB4 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
 				937CAF59257F0B2E00F5ACB4 /* LikeShareCommentInteractor.swift */,
 			);
 			path = Interactor;
-			sourceTree = "<group>";
-		};
-		937CAF63257F16DA00F5ACB4 /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-				937CAF64257F16E000F5ACB4 /* BundleExension.swift */,
-			);
-			path = Extension;
 			sourceTree = "<group>";
 		};
 		937CAF6C257F170700F5ACB4 /* Resource */ = {
@@ -415,7 +441,6 @@
 			isa = PBXGroup;
 			children = (
 				937CAFE9257F685700F5ACB4 /* Source */,
-				937CAF91257F656200F5ACB4 /* Library */,
 			);
 			path = RxCocoa_Texture;
 			sourceTree = "<group>";
@@ -444,7 +469,6 @@
 			children = (
 				937CAFF2257F690400F5ACB4 /* Repository */,
 				937CAFFB257F6E2200F5ACB4 /* ViewModel */,
-				937CB026257F724400F5ACB4 /* Extionsion */,
 				937CB00D257F6E6F00F5ACB4 /* Model */,
 				937CB004257F6E4400F5ACB4 /* Etc */,
 			);
@@ -492,8 +516,12 @@
 		937CB026257F724400F5ACB4 /* Extionsion */ = {
 			isa = PBXGroup;
 			children = (
+				937CAF64257F16E000F5ACB4 /* BundleExension.swift */,
 				937CB027257F725900F5ACB4 /* ASLayoutElementStyle+Rx.swift */,
 				93A73584257F7A7E001B298D /* Decoder+extension.swift */,
+				930438052586F787001AD83C /* UIImage+Extionsion.swift */,
+				9304380D2586F7D0001AD83C /* UIColor+Extionsion.swift */,
+				930438122586F817001AD83C /* String+Extionsion.swift */,
 			);
 			path = Extionsion;
 			sourceTree = "<group>";
@@ -757,6 +785,7 @@
 			files = (
 				088E21BF257E6EB300CBEF3D /* Stories.swift in Sources */,
 				937CAFEB257F685E00F5ACB4 /* RepositoryViewController.swift in Sources */,
+				930438192586F85B001AD83C /* Log.swift in Sources */,
 				088E21A8257E6D7000CBEF3D /* HomePresentation.swift in Sources */,
 				937CAFBE257F668900F5ACB4 /* ASNetworkImageNode+Rx.swift in Sources */,
 				937CAF5A257F0B2E00F5ACB4 /* LikeShareCommentInteractor.swift in Sources */,
@@ -764,6 +793,7 @@
 				088E21A0257E6C4500CBEF3D /* HomeViewController.swift in Sources */,
 				0808A6AD2582654B00855C3E /* SignUpContainerNode.swift in Sources */,
 				93A73585257F7A7E001B298D /* Decoder+extension.swift in Sources */,
+				9304380E2586F7D0001AD83C /* UIColor+Extionsion.swift in Sources */,
 				937CAFCD257F671100F5ACB4 /* Driver+ASSubscription.swift in Sources */,
 				93A73593257F849A001B298D /* UserProfileViewController.swift in Sources */,
 				937CB00F257F6E7500F5ACB4 /* Repository.swift in Sources */,
@@ -779,6 +809,7 @@
 				937CAFA5257F65F000F5ACB4 /* ASControlNode+Rx.swift in Sources */,
 				937CB01A257F6F5200F5ACB4 /* User.swift in Sources */,
 				937CB028257F725900F5ACB4 /* ASLayoutElementStyle+Rx.swift in Sources */,
+				930438062586F787001AD83C /* UIImage+Extionsion.swift in Sources */,
 				937CAFB4257F665F00F5ACB4 /* ASImageNode+Rx.swift in Sources */,
 				937CAF9B257F65A200F5ACB4 /* ASDisplayNode+Rx.swift in Sources */,
 				088E21D4257E6F9400CBEF3D /* FeedCellNode.swift in Sources */,
@@ -794,6 +825,7 @@
 				937CB022257F711300F5ACB4 /* ImageDownloader.swift in Sources */,
 				088E2196257E6BC500CBEF3D /* BaseNode.swift in Sources */,
 				088E21EE257E761600CBEF3D /* FeedImageNode.swift in Sources */,
+				930438132586F817001AD83C /* String+Extionsion.swift in Sources */,
 				937CAFF4257F691100F5ACB4 /* RepositoryListCellNode.swift in Sources */,
 				937CAFB9257F667200F5ACB4 /* RxASEditableTextNodeDelegateProxy.swift in Sources */,
 				937CAFFD257F6E2800F5ACB4 /* RepositoryViewModel.swift in Sources */,

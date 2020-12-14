@@ -115,23 +115,3 @@ class SignUpFieldReactor: Reactor {
         return newState
     }
 }
-
-
-extension UIColor {
-    
-    static var valid: UIColor {
-        return UIColor.init(red: 0.2, green: 0.8, blue: 0.2, alpha: 1.0)
-    }
-    
-    static var invalid: UIColor {
-        return UIColor.init(red: 0.8, green: 0.2, blue: 0.3, alpha: 1.0)
-    }
-}
-
-extension String {
-    
-    func isValidEmail() -> Bool {
-        let emailTest = NSPredicate(format:"SELF MATCHES %@", "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}")
-        return emailTest.evaluate(with: self)
-    }
-}
